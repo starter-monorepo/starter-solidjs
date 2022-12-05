@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite --port 3333 --open",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test": "vitest",
+    "up": "taze major -I"
+  },
+  "dependencies": {
+    "@solidjs/router": "^0.5.1",
+    "solid-js": "^1.6.2"
+  },
+  "devDependencies": {
+    "@iconify-json/carbon": "^1.1.11",
+    "@types/node": "^18.11.9",
+    "@unocss/reset": "^0.47.2",
+    "eslint": "^8.28.0",
+    "typescript": "^4.9.3",
+    "unocss": "^0.47.2",
+    "unplugin-auto-import": "^0.12.0",
+    "vite": "^3.2.4",
+    "vite-plugin-pages": "^0.27.1",
+    "vitest": "^0.25.3"
+  }
+}
