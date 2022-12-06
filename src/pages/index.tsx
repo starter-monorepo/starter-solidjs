@@ -6,10 +6,15 @@ const App: Component = () => {
   const [name, setName] = createSignal("")
   const navigate = useNavigate();
 
-  const go = () => {
+  const go = (e : KeyboardEvent) => {
+    if(e.key !== 'Enter') return
     if (name()) {
       navigate(`/hi/${name()}`)
     }
+  }
+
+  function handleInput(e: any){
+    setName(e.target.value)
   }
   return (
     <div>
@@ -20,7 +25,7 @@ const App: Component = () => {
         </a>
       </p>
       <p>
-        <em text-sm op75>Opinionated Vite Starter Template</em>
+        <em text-sm op-75>Opinionated Vite Starter Template</em>
       </p>
 
       <div py-4 />
@@ -28,8 +33,8 @@ const App: Component = () => {
       <TheInput
         placeholder="What's your name?"
         autocomplete="false"
-        value={name}
-        setValue={setName}
+        value={name()}
+        onInput={handleInput}
         onKeydown={go}
       />
 
